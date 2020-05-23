@@ -1,0 +1,43 @@
+.wordItem {
+  overflow: hidden;
+  width: 100%;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  will-change: transform, opacity, height;
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 80px;
+  user-select: none;
+}
+
+.wordWrapper {
+  width: 40vw;
+  position: absolute;
+  pointer-events: none;
+}
+
+.test {
+  color: #bbc7ee;
+  color: #bcb7db;
+  color: #b1aacf;
+  color: #9da8d5;
+  color: #86abd3;
+}
+
+ @media (max-width: 600px) {
+   .wordWrapper {
+     width: 90vw;
+   }
+
+   .wordItem {
+     font-size: 3em;
+    transform: scaleY(0.8);
+   }
+
+ }

@@ -1,0 +1,42 @@
+.dockWrapper {
+  display: flex;
+  position: fixed;
+  bottom: 1.5rem;
+  width: 35vw;
+  height: 6rem;
+  font-size: 4rem;
+  border-radius: 1rem;
+  background-color: #f0f8ff50;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  will-change: transform, opacity;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  align-self: center;
+}
+
+.dockWrapper:hover {
+  background-color: #0000;
+}
+
+@media (min-width: 1600px) and (max-width: 1900px) {
+  .dockWrapper {
+    width: 60vw;
+  }
+}
+
+
+@media (min-width: 900px) and (max-width: 1600px) {
+  .dockWrapper {
+    width: 80vw;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .dockWrapper {
+    width: 95vw;
+    font-size: 3rem;
+  }
+}

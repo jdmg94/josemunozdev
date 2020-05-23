@@ -1,0 +1,23 @@
+body, body > div {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
+segoe ui, arial, sans-serif;
+}
+
+h1, h2, h3, p {
+  color: #EEE;
+}
+
+article > h1 {
+  align-self: center;
+  text-align: center;
+  font-size: 4rem;
+  transform: translateY(-25rem);
+}
