@@ -1,0 +1,101 @@
+.header {
+  font-size: 4rem;
+  width: 100%;
+  text-align: center;
+}
+
+.subHeader {
+  font-size: 3.5rem;
+}
+
+.article {
+  flex: 1;
+  margin: 0;
+  font-weight: 300;
+  padding: 0 15rem;
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: center;
+  font-size: 23px;
+  justify-content: flex-start;
+  transform: translateY(-25rem);
+}
+
+.image {
+  height: auto;
+  width: 25vw;
+  margin: 0.25rem;
+}
+
+.level {
+  margin: 0 1rem;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.levelItem {
+  width: 50%;
+}
+
+@media (min-width: 1600px) and (max-width: 1900px) {
+  .header {
+    font-size: 3.5rem;
+  }
+
+  .subHeader {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1600px) {
+  .header {
+    font-size: 3rem;
+  }
+
+  .subHeader {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .article {
+    padding: 0 1rem;
+    transform: translateY(-23rem);
+  }
+
+  .article > p span {
+    text-align: center;
+  }
+
+  .header {
+    font-size: 2.5rem;
+  }
+
+  .subHeader {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .level {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .level:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
+
+  .levelItem {
+    width: 100%;
+    position: relative;
+    display: inline-flex;
+    align-self: stretch;
+  }
+
+  .image {
+    width: 90vw;
+  }
+}

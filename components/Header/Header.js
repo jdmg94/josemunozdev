@@ -12,12 +12,11 @@ const Header = ({ animationRef: ref }) => {
       opacity: 0,
       height: 0,
       innerHeight: 0,
-      transform: "perspective(600px) rotateX(0deg)",
       color: "#c23369",
     },
     enter: [
       { opacity: 1, height: 80, innerHeight: 80 },
-      { transform: "perspective(600px) rotateX(0deg)", color: "#28d79f" },
+      { color: "#28d79f" },
     ],
     leave: [
       { color: "#c23369" },
@@ -40,21 +39,19 @@ const Header = ({ animationRef: ref }) => {
         4800
       )
     );
-  }, []);
 
-  useEffect(() => {
-    console.log("current words array:", words);
-  }, [words]);
+    return () => timers.current?.map(clearTimeout)
+  }, []);
 
   return (
     <Container style={{ position: "absolute", touchEvents: 'none', pointerEvents: 'none' }}>
       <div className={styles.wordWrapper}>
         {transition.map(
-          ({ item, key, props: { innerHeight, ...rest } }) =>
+          ({ item, key, props: { color, innerHeight, ...rest } }) =>
             item && (
               <animated.div key={key} className={styles.wordItem} style={rest}>
                 <animated.span
-                  style={{ overflow: "hidden", height: innerHeight }}
+                  style={{ color, overflow: "hidden", height: innerHeight, willChange: 'height' }}
                 >
                   {item}
                 </animated.span>

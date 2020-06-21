@@ -9,9 +9,12 @@ const App = () => (
     <Head>
       <title>Jose Munoz Software Engineer</title>
       <link rel="icon" href="/favicon.ico" />
+      <meta property="og:type" content="website" />
       <meta property="og:title" content="Jose Munoz Software Engineer" />
-      <meta property="og:image" content="//profile.jpeg" />
-      <meta property="og:description" content="An excellent 20-something-year-old developer" />
+      <meta property="og:image" content="/profile.jpeg" />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:url" content="https://josemunoz.dev" />
+      <meta property="og:description" content="Software Engineer based in Vancouver" />
     </Head>
     <Space />
     <Header />

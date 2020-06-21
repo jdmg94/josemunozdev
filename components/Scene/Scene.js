@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Canvas } from "react-three-fiber";
 import Container from "../Container";
 
-const Wrapper = ({ children, lights = <ambientLight raycast />, ...props }) => (
+const Wrapper = ({ children, lights = [<ambientLight raycast />], ...props }) => (
   <Container>
     <Canvas
       shadowMap
@@ -11,7 +11,7 @@ const Wrapper = ({ children, lights = <ambientLight raycast />, ...props }) => (
       {...props}
     >
       {lights}
-      <Suspense fallback={null}>{children}</Suspense>
+      <Suspense fallback={false}>{children}</Suspense>
     </Canvas>
   </Container>
 );

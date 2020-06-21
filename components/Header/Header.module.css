@@ -3,13 +3,11 @@
   width: 100%;
   color: white;
   display: flex;
-  text-align: center;
   justify-content: flex-start;
   align-items: center;
   font-size: 5em;
   font-weight: 800;
   text-transform: uppercase;
-  will-change: transform, opacity, height;
   white-space: nowrap;
   cursor: pointer;
   line-height: 80px;
@@ -30,14 +28,25 @@
   color: #86abd3;
 }
 
- @media (max-width: 600px) {
-   .wordWrapper {
-     width: 90vw;
-   }
+@media (min-width: 1600px) and (max-width: 1900px) {
 
-   .wordItem {
-     font-size: 3em;
-    transform: scaleY(0.8);
-   }
+}
 
- }
+
+@media (min-width: 900px) and (max-width: 1600px) {
+  .wordWrapper {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .wordWrapper {
+    width: 100vw;
+    transform: translateY(-5rem);
+  }
+
+  .wordItem {
+    font-size: 3em;
+  }
+
+}

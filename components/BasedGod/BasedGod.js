@@ -8,12 +8,13 @@ title: Rhetorician
 
 import * as THREE from 'three'
 import React, { useRef } from 'react'
+import { draco } from 'drei'
 import { useLoader, useFrame } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 export default function Model(props) {
   const group = useRef()
-  const { nodes, materials } = useLoader(GLTFLoader, '/based-god/scene.gltf')
+  const { nodes, materials } = useLoader(GLTFLoader, '/based-god/scene.gltf', draco())
 
   useFrame(() => {
     group.current.rotation.y -= 0.01

@@ -1,28 +1,27 @@
 .dockWrapper {
-  display: flex;
-  position: fixed;
-  bottom: 1.5rem;
-  width: 35vw;
+  width: 40vw;
   height: 6rem;
+  display: flex;
+  bottom: 1.5rem;
+  position: fixed;
   font-size: 4rem;
-  border-radius: 1rem;
-  background-color: #f0f8ff50;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
-  will-change: transform, opacity;
-  transition: all 0.3s ease-in-out;
   cursor: pointer;
   align-self: center;
+  align-items: center;
+  border-radius: 1rem;
+  flex-direction: row;
+  background-color: #f0f8ff50;
+  justify-content: space-evenly;
+  transition: all 0.3s ease-in-out;
 }
 
 .dockWrapper:hover {
-  background-color: #0000;
+  background-color: #f0f8ff00;
 }
 
 @media (min-width: 1600px) and (max-width: 1900px) {
   .dockWrapper {
-    width: 60vw;
+    width: 50vw;
   }
 }
 
@@ -38,5 +37,10 @@
   .dockWrapper {
     width: 95vw;
     font-size: 3rem;
+    touch-action: none;
+    background-color: #f0f8ffF0;
+  }
+  .dockWrapper:hover {
+    background-color: #f0f8ffF0;
   }
 }

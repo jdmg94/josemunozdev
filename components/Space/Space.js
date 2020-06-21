@@ -7,6 +7,7 @@ title: Need some space?
 */
 
 import * as THREE from "three";
+import { draco } from 'drei'
 import React, { useRef, useLayoutEffect } from "react";
 import { useLoader, useFrame } from "react-three-fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -19,14 +20,14 @@ export const centerObjectPosition = (object) =>
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useLoader(GLTFLoader, "/space/scene.gltf");
+  const { nodes, materials } = useLoader(GLTFLoader, "/space/scene.gltf", draco());
 
   useLayoutEffect(() => {
     centerObjectPosition(group.current);
   }, []);
 
   useFrame(({ camera }) => {
-    camera.position.x += 0.1125
+    camera.position.x -= 0.1125
   })
 
   return (
