@@ -19,6 +19,7 @@
     "react-honduras": "^1.0.1",
     "react-spring": "^8.0.27",
     "react-three-fiber": "^4.2.4",
+    "swr": "^0.2.3",
     "three": "^0.116.1"
   },
   "devDependencies": {

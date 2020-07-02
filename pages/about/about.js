@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import Honduras from "react-honduras";
 
 import Container from "../../components/Container";
-import Marquee from "../../components/Marquee";
 import styles from "./about.module.css";
 
 const BasedGod = dynamic(() => import("../../components/BasedGod"), {
@@ -12,6 +11,10 @@ const BasedGod = dynamic(() => import("../../components/BasedGod"), {
 });
 
 const TechStack = dynamic(() => import("../../components/TechStack"), {
+  ssr: false,
+});
+
+const Marquee = dynamic(() => import("../../components/Marquee"), {
   ssr: false,
 });
 
