@@ -1,8 +1,8 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import Header from "../components/Header";
+import Header from "../src/Header";
 
-const Space = dynamic(() => import("../components/Space"), { ssr: false });
+const Space = dynamic(() => import("../src/Space"), { ssr: false });
 
 const App = () => (
   <>

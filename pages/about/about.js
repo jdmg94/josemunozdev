@@ -2,19 +2,19 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Honduras from "react-honduras";
 
-import Container from "../../components/Container";
+import Container from "../../src/Container";
 import styles from "./about.module.css";
 
-const BasedGod = dynamic(() => import("../../components/BasedGod"), {
+const BasedGod = dynamic(() => import("../../src/BasedGod"), {
   ssr: false,
   loading: () => <Container />,
 });
 
-const TechStack = dynamic(() => import("../../components/TechStack"), {
+const TechStack = dynamic(() => import("../../src/TechStack"), {
   ssr: false,
 });
 
-const Marquee = dynamic(() => import("../../components/Marquee"), {
+const Marquee = dynamic(() => import("../../src/Marquee"), {
   ssr: false,
 });
 
