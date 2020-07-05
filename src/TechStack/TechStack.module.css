@@ -10,10 +10,12 @@
 }
 
 .nookItem {
-  display: inline-flex;
+  width: 8rem !important;
+  height: 8rem !important;
   align-items: center;
+  margin: 0.75em 1.5em;
+  display: inline-flex;
   justify-content: center;
-  margin: 1.5rem;
 }
 
 @media (min-width: 1600px) and (max-width: 1900px) {
@@ -23,6 +25,16 @@
 }
 
 @media (min-width: 900px) and (max-width: 1600px) {
+  .nook {
+    justify-content: space-around;
+    height: auto;
+    width: 100vw;
+  }
+
+  .nookItem {
+    margin: 0.5rem;
+    transform: scale(0.9);
+  }
 
 }
 

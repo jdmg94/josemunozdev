@@ -6,7 +6,7 @@ import Img from "../Img";
 const Marquee = ({ images }) => (
   <Suspense
     fallback={
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} style={{ justifyContent: "center" }}>
         <Loader />
       </div>
     }

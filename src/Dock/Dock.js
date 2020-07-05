@@ -1,9 +1,7 @@
-import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useSpring, animated, config } from "react-spring";
 
-import DockItem from "../DockItem";
+import DockItem from "./DockItem";
 import styles from "./Dock.module.css";
 
 const Dock = () => (

@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: flex-start;
   will-change: transform;
-  animation: marquee 30s linear infinite;
+  animation: marqueeAnimation 30s linear infinite;
 }
 
 .backup {
@@ -34,8 +34,7 @@
   align-items: center;
   justify-content: flex-start;
   will-change: transform;
-  animation: backupMarquee 30s linear infinite;
-  animation-delay: 15s;
+  animation: backupAnimation 15s linear infinite;
 
 }
 
@@ -44,21 +43,20 @@
     animation-duration: 20s;
   }
   .backup {
-    animation-duration: 20s;
-    animation-delay: 10s;
+    animation-duration: 10s;
   }
 }
 
-@keyframes marquee {
+@keyframes backupAnimation {
   from {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   to {
     transform: translateX(-100%);
   }
 }
 
-@keyframes backupMarquee {
+@keyframes marqueeAnimation {
   from {
     transform: translateX(0%);
   }

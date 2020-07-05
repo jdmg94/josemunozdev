@@ -20,14 +20,13 @@ const techStack = [
   "sass",
 ];
 
-const TechStack = () => (
+const TechStack = ({ color = "#FFF" }) => (
   <div className={styles.nook}>
     {techStack.map((item) => (
       <Icon
-        size="6x"
-        color="#FFF"
         key={item}
         title={item}
+        color={color}
         icon={["fab", item]}
         className={styles.nookItem}
       />

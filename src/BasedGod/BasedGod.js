@@ -4,6 +4,7 @@ author: engine9 (https://sketchfab.com/engine9)
 license: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 source: https://sketchfab.com/3d-models/rhetorician-a89f035291d843069d73988cc0e25399
 title: Rhetorician
+edited by: Jose Munoz
 */
 
 import * as THREE from 'three'

@@ -4,7 +4,7 @@ import Container from "../Container";
 
 export default { title: "Loader" };
 
-export const Loading = () => (
+export const Example = () => (
   <Container>
     <Loader />
   </Container>
