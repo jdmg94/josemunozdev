@@ -1,8 +1,8 @@
 import BasedGod from "./BasedGodScene";
 
-export default { title: "BasedGod" };
+export default { title: "Based God" };
 
-export const Example = () => (
+export const Me = () => (
   <div>
     <BasedGod />
   </div>

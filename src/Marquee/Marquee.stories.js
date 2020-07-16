@@ -18,7 +18,7 @@ const images = [
     alt: "cat",
   },
   {
-    src: "https://i.redd.it/ptrlvv9nij851.jpg",
+    src: "https://i.imgur.com/4AiXzf8.jpg",
     alt: "cat",
   },
 ];

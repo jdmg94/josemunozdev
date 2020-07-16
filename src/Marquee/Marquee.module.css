@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: flex-start;
   will-change: transform;
-  animation: marqueeAnimation 30s linear infinite;
+  animation: marqueeAnimation 15s linear infinite;
 }
 
 .backup {
@@ -38,29 +38,20 @@
 
 }
 
-@media (max-width: 600px) {
-  .track {
-    animation-duration: 20s;
+@keyframes marqueeAnimation {
+  from {
+    transform: translateX(0);
   }
-  .backup {
-    animation-duration: 10s;
+  to {
+    transform: translateX(-100%)
   }
 }
 
 @keyframes backupAnimation {
   from {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
-  }
-}
-
-@keyframes marqueeAnimation {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-200%)
   }
 }
