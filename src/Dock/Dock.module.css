@@ -15,9 +15,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.dockWrapper:hover {
-  background-color: #f0f8ff00;
-}
 
 @media (min-width: 1600px) and (max-width: 1900px) {
   .dockWrapper {
@@ -38,9 +35,6 @@
     width: 95vw;
     font-size: 3em;
     touch-action: none;
-    background-color: #f0f8ffF0;
-  }
-  .dockWrapper:hover {
     background-color: #f0f8ffF0;
   }
 }

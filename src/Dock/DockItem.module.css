@@ -11,13 +11,6 @@
   height: 5rem !important;
   width: 5rem !important;
   border-radius: 0.25rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.dockItem:hover {
-  transform: scale(1.5);
-  background-color: #f0f8ff;
-  padding: 0.25rem 0.5rem;
 }
 
 .dockLabel {
@@ -27,8 +20,12 @@
   margin: 0;
 }
 
-.dockerLabel:hover {
-  color: #111;
+.dockItem > svg {
+  transition: all 0.3s ease-in-out;
+}
+
+.dockItem > svg:hover {
+  transform: translateY(-1rem);
 }
 
 @media (min-width: 900px) and (max-width: 1600px) {
@@ -47,12 +44,5 @@
   .dockItem {
     height: 3rem !important;
     width: 3rem !important;
-  }
-
-  .dockItem:hover {
-    transform: scale(1);
-    color: #111;
-    background-color: #1110;
-    padding: 0;
   }
 }

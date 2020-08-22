@@ -14,7 +14,7 @@ const App = () => (
       <meta property="og:image" content="/profile.jpeg" />
       <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:url" content="https://josemunoz.dev" />
-      <meta property="og:description" content="Software Engineer based in Vancouver" />
+      <meta property="og:description" content="Software Engineer based in Vancouver" />      
     </Head>
     <Space />
     <Header />

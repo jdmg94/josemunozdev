@@ -9,7 +9,8 @@ const IconLabel = ({ icon, label }) => (
   </>
 );
 
-const DockItem = ({ internal, icon, label, ...props }) => {
+const DockItem = ({ internal, icon, label, isVisible = true, ...props }) => {
+  if (!isVisible) return false;
   if (internal) {
     return (
       <Link {...props}>

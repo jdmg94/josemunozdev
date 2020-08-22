@@ -4,7 +4,7 @@ import Scene from "../Scene";
 import Space from "./Space";
 
 const Wrapper = () => (
-  <Scene camera={{ position: [100, 100, 100], far: 500 }}>
+  <Scene camera={{ position: [50, 50, 50], far: 400 }}>
     <Space />
     <OrbitControls />
     <StandardEffects bloom={{ luminanceThreshold: 0.99 }} />

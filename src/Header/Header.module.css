@@ -1,52 +1,27 @@
-.wordItem {
-  overflow: hidden;
-  width: 100%;
-  color: white;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 5em;
-  font-weight: 800;
-  text-transform: uppercase;
-  white-space: nowrap;
+.typewriter h1 {
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 600;
   cursor: pointer;
-  line-height: 80px;
   user-select: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap; 
+  letter-spacing: .15em; /* Adjust as needed */
+  animation-name: typing, blink-caret;
+  animation-duration: 3.5s, .75s;
+  animation-timing-function: steps(26, end), step-end;
+  animation-iteration-count: 1, infinite;
 }
 
-.wordWrapper {
-  width: 40vw;
-  position: absolute;
-  pointer-events: none;
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
-.test {
-  color: #bbc7ee;
-  color: #bcb7db;
-  color: #b1aacf;
-  color: #9da8d5;
-  color: #86abd3;
-}
-
-@media (min-width: 1600px) and (max-width: 1900px) {
-
-}
-
-
-@media (min-width: 900px) and (max-width: 1600px) {
-  .wordWrapper {
-    width: 60vw;
-  }
-}
-
-@media (max-width: 600px) {
-  .wordWrapper {
-    width: 100vw;
-    transform: translateY(-5rem);
-  }
-
-  .wordItem {
-    font-size: 3em;
-  }
-
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+  100% { border-color: transparent }
 }
