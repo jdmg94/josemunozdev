@@ -7,7 +7,6 @@ title: Rhetorician
 edited by: Jose Munoz
 */
 
-import * as THREE from 'three'
 import React, { useRef } from 'react'
 import { draco } from 'drei'
 import { useLoader, useFrame } from 'react-three-fiber'

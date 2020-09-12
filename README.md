@@ -1,6 +1,5 @@
 # TODO
 
-- make dock home page only
 - create go back button for about page
-- write actual story on about page
+- react-i18n and spanish translation
 - maybe move to emotion CSS

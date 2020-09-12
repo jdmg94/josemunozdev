@@ -1,5 +1,4 @@
 import React from "react";
-import { StandardEffects, HTML } from "drei";
 
 import Scene from "../Scene";
 import BasedGod from "./BasedGod";
@@ -14,7 +13,7 @@ const Wrapper = () => (
       ]}
     >
       <BasedGod />
-      <StandardEffects bloom={{ luminanceThreshold: 0.99 }} />
+      {/* <StandardEffects bloom={{ luminanceThreshold: 0.99 }} /> */}
     </Scene>
   </div>
 );
