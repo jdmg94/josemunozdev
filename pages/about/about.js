@@ -2,15 +2,10 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Honduras from "react-honduras";
 
-import Container from "../../src/Container";
+import TechStack from "../../src/TechStack";
 import styles from "./about.module.css";
 
 const BasedGod = dynamic(() => import("../../src/BasedGod"), {
-  ssr: false,
-  loading: () => <Container />,
-});
-
-const TechStack = dynamic(() => import("../../src/TechStack"), {
   ssr: false,
 });
 
@@ -42,10 +37,10 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>About Me - Jose Munoz Software Engineer</title>
+        <title>About Me - José Muñoz Software Engineer</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Jose Munoz Software Engineer" />
+        <meta property="og:title" content="José Muñoz Software Engineer" />
         <meta property="og:image" content="/profile.jpeg" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:url" content="https://josemunoz.dev" />
@@ -54,34 +49,32 @@ const About = () => {
           content="Software Engineer based in Vancouver"
         />
       </Head>
-      <div>
-        <BasedGod />
-      </div>
+      <BasedGod />
       <div>
         <article className={styles.article}>
-          <h1 className={styles.header}>Who is Jose Munoz?</h1>
+          <h1 className={styles.header}>Who is José Muñoz?</h1>
           <div className={styles.level}>
             <div className={styles.levelItem}>
               <p>
-                Born on September 27th, 1994 in the city of San Pedro Sula,
-                Honduras. Jose Munoz is a Senior Software Engineer creating
-                engaging applications using React and GraphQL.
+                I'm a software developer, speaker, and technology enthusiast
+                based on Vancouver working at Destiny Media as a Lead Frontend
+                Engineer. I have spoken in a few different cities like San Diego
+                and Vancouver about frontend development, design, and more.
               </p>
             </div>
-            <div className={styles.image}>
-              <Honduras />
-            </div>
-          </div>
-          <div className={styles.level}>
             <img
               src="/images/chart.svg"
               alt="Personal Mission"
               className={styles.image}
             />
+          </div>
+          <div className={styles.level}>
+            <div className={styles.image}>
+              <Honduras />
+            </div>
             <div className={styles.levelItem}>
               <p>
-                I believe in writing elegant code that yields consistent and
-                reproducible results. As a developer I
+                I was born in San Pedro Sula, Honduras. 
               </p>
             </div>
           </div>
@@ -91,8 +84,6 @@ const About = () => {
             Some Technologies I've Worked With:
           </h2>
           <TechStack />
-          <p>And many more that didn't had a nice logo</p>
-          {/* <h2 className={styles.subHeader}>Work Experience</h2> */}
         </article>
       </div>
     </>

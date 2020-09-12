@@ -10,7 +10,7 @@
   align-items: center;
   border-radius: 1rem;
   flex-direction: row;
-  background-color: #f0f8ff50;
+  background-color: #f0f8ff95;
   justify-content: space-evenly;
   transition: all 0.3s ease-in-out;
 }

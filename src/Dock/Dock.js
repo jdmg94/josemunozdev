@@ -17,13 +17,13 @@ const Dock = () => {
         isVisible={router.pathname !== '/'}
         icon={<FontAwesomeIcon icon={["fab", "grav"]} />}
       />
-      <DockItem
+      {/* <DockItem
         internal
         label="About"
         href="/about"
         isVisible={router.pathname !== '/about'}
         icon={<FontAwesomeIcon color="#7CC6FE" icon={["fas", "info-circle"]} />}
-      />
+      /> */}
       <DockItem
         label="Twitter"
         href="https://twitter.com/jdmg94"

@@ -1,6 +1,5 @@
 .typewriter h1 {
   font-size: 50px;
-  line-height: 50px;
   font-weight: 600;
   cursor: pointer;
   user-select: none;
@@ -15,6 +14,19 @@
   animation-iteration-count: 1, infinite;
 }
 
+.actionButton > a {
+  text-decoration: none;
+  background-color: #44f;
+  border-radius: 0.25rem;
+  width: 13rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 24px;
+}
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
@@ -23,5 +35,11 @@
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
-  100% { border-color: transparent }
+  100% { border-right: 0; }
+}
+
+@media (max-width: 767px) {
+  .typewriter {
+    display: none;
+  }
 }
