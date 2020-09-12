@@ -2,6 +2,8 @@
   font-size: 4rem;
   width: 100%;
   text-align: center;
+  text-decoration: underline;
+  text-decoration-color: orange;
 }
 
 .subHeader {

@@ -2,6 +2,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Honduras from "react-honduras";
 
+import BackButton from "../../src/BackButton";
 import TechStack from "../../src/TechStack";
 import styles from "./about.module.css";
 
@@ -59,6 +60,7 @@ const About = () => (
         development, design, and more."
       />
     </Head>
+    <BackButton href="/" />
     <BasedGod />
     <div>
       <article className={styles.article}>
@@ -105,7 +107,7 @@ const About = () => (
           </div>
         </div>
         <h2 className={styles.subHeader}>Highlights</h2>
-        <Marquee images={images} />
+        <Marquee images={images} itemDelay={1.8} />
         <h2 className={styles.subHeader}>
           Some Technologies I've Worked With:
         </h2>

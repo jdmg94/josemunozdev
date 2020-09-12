@@ -7,9 +7,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  animation-play-state: running;
   touch-action: pan-x;
-  will-change: contents;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: unset;
 }
 
 .slide {
@@ -18,40 +19,36 @@
   height: 100%;
   width: auto;
   display: inline-block;
+  will-change: scroll-position;
 }
 
 .track {
-  height: 50vh;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  will-change: transform;
-  animation: marqueeAnimation 5s ease-in-out alternate infinite;
-  animation-play-state: inherit;
+  animation-name: marqueeAnimation;
+  animation-timing-function: inherit;
+  animation-duration: inherit;
+  animation-direction: inherit;
+  animation-iteration-count: inherit;
+  height: inherit;
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
 }
 
 .backup {
-  height: 50vh;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  will-change: transform;
-  animation: backupAnimation 5s ease-in-out alternate infinite;
-  animation-play-state: inherit;
+  animation-name: marqueeAnimation;
+  animation-timing-function: inherit;
+  animation-duration: inherit;
+  animation-direction: inherit;
+  animation-iteration-count: inherit;
+  height: inherit;
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
 }
 
 @keyframes marqueeAnimation {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes backupAnimation {
   from {
     transform: translateX(0);
   }

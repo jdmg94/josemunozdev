@@ -3,9 +3,7 @@ import styles from "./Marquee.module.css";
 import Loader from "../Loader";
 import Img from "../Img";
 
-const deriveDuration = (items = []) => `${Math.max(items.length * 0.75, 7)}s`;
-
-const Marquee = ({ images }) => (
+const Marquee = ({ images = [], itemDelay = 1 }) => (
   <Suspense
     fallback={
       <div className={styles.wrapper} style={{ justifyContent: "center" }}>
@@ -13,19 +11,18 @@ const Marquee = ({ images }) => (
       </div>
     }
   >
-    <div className={styles.wrapper}>
-      <div
-        className={styles.track}
-        style={{ animationDuration: deriveDuration(images) }}
-      >
+    <div
+      className={styles.wrapper}
+      style={{
+        animationDuration: `${Math.max(images.length * itemDelay, 7)}s`,
+      }}
+    >
+      <div className={styles.track}>
         {images.map((props, index) => (
           <Img key={`slide-${index}`} className={styles.slide} {...props} />
         ))}
       </div>
-      <div
-        className={styles.backup}
-        style={{ animationDuration: deriveDuration(images) }}
-      >
+      <div className={styles.backup}>
         {images.map((props, index) => (
           <img
             key={`slide-backup-${index}`}
