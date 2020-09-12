@@ -68,10 +68,10 @@ const About = () => (
         <div className={styles.level}>
           <div className={styles.levelItem}>
             <p>
-              I'm a software developer, speaker, and technology enthusiast based
-              on Vancouver working as a Lead Frontend Engineer. I have spoken on
-              meetups in San Diego and Vancouver about frontend development,
-              design, and more. I write ocasionally on{" "}
+              I'm a software engineer, speaker, and technology enthusiast based
+              in Vancouver, BC. I work as a Lead Frontend Engineer for Destiny
+              Media. I have spoken at meetups about frontend development, and
+              more. I contribute to OSS and write ocasionally on{" "}
               <a
                 target="_blank"
                 rel="noreferer noopener"
@@ -83,7 +83,7 @@ const About = () => (
             </p>
           </div>
           <img
-            src="/images/chart.svg"
+            src="/images/circuit-board.svg"
             alt="Personal Mission"
             className={styles.image}
           />
@@ -100,9 +100,7 @@ const About = () => (
               I enjoy traveling, reading, cooking, or watching a film. I've
               worked in several projects from Honduras, Panama, Canada, and U.S.
               that have ranged from backend, frontend, and fullstack roles for
-              around 7 years. I've been to React Conf twice, first on a Facebook
-              scholarship for the conference, and after that on my own pocket
-              (totally worth it btw).
+              around 7 years.
             </p>
           </div>
         </div>
