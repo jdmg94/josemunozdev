@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import Honduras from "react-honduras";
 
 import BackButton from "../../src/BackButton";
-import TechStack from "../../src/TechStack";
 import styles from "./about.module.css";
 
 const BasedGod = dynamic(() => import("../../src/BasedGod"), {
@@ -68,10 +67,18 @@ const About = () => (
         <div className={styles.level}>
           <div className={styles.levelItem}>
             <p>
-              I'm a software engineer, speaker, and technology enthusiast based
-              in Vancouver, BC. I work as a Lead Frontend Engineer for Destiny
-              Media. I have spoken at meetups about frontend development, and
-              more. I contribute to OSS and write ocasionally on{" "}
+              I'm a software engineer, speaker,{" "}
+              <a
+                target="_blank"
+                rel="noreferer noopener"
+                href="https://www.credential.net/a4ab5783-7c2c-4c38-a2e3-d6cba2fbe8a3"
+              >
+                Scrum Master
+              </a>{" "}
+              and technology enthusiast based in Vancouver, BC. I work as a Lead
+              Frontend Engineer for Destiny Media. I have spoken at meetups
+              about frontend development, code design patterns, and more. I contribute to OSS and
+              write ocasionally on{" "}
               <a
                 target="_blank"
                 rel="noreferer noopener"
@@ -83,6 +90,7 @@ const About = () => (
             </p>
           </div>
           <img
+            width="15vw"
             src="/images/circuit-board.svg"
             alt="Personal Mission"
             className={styles.image}
@@ -106,10 +114,6 @@ const About = () => (
         </div>
         <h2 className={styles.subHeader}>Highlights</h2>
         <Marquee images={images} itemDelay={1.8} />
-        <h2 className={styles.subHeader}>
-          Some Technologies I've Worked With:
-        </h2>
-        <TechStack />
       </article>
     </div>
   </>
