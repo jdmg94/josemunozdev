@@ -35,4 +35,4 @@ const Marquee = ({ images = [], itemDelay = 1 }) => (
   </Suspense>
 );
 
-export default Marquee;
+export default React.memo(Marquee);

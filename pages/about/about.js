@@ -2,11 +2,26 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Honduras from "react-honduras";
 
+import Loader from "../../src/Loader";
 import BackButton from "../../src/BackButton";
 import styles from "./about.module.css";
 
 const BasedGod = dynamic(() => import("../../src/BasedGod"), {
   ssr: false,
+  loading: () => (
+    <div
+      style={{
+        flex: 1,
+        width: '100vw',
+        minHeight: '40vh',
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Loader />
+    </div>
+  ),
 });
 
 const Marquee = dynamic(() => import("../../src/Marquee"), {
@@ -60,8 +75,22 @@ const About = () => (
       />
     </Head>
     <BackButton href="/" />
-    <BasedGod />
-    <div>
+    <BasedGod
+      style={{ height: "40vh" }}
+      fallback={
+        <div style={{
+          flex: 1,
+          width: '100vw',
+          minHeight: '40vh',
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}>
+          <Loader />
+        </div>
+      }
+    />
+    <div style={{ textAlign: "center" }}>
       <article className={styles.article}>
         <h1 className={styles.header}>Who is José Muñoz?</h1>
         <div className={styles.level}>
@@ -77,8 +106,8 @@ const About = () => (
               </a>{" "}
               and technology enthusiast based in Vancouver, BC. I work as a Lead
               Frontend Engineer for Destiny Media. I have spoken at meetups
-              about frontend development, code design patterns, and more. I contribute to OSS and
-              write ocasionally on{" "}
+              about frontend development, code design patterns, and more. I
+              contribute to OSS and write ocasionally on{" "}
               <a
                 target="_blank"
                 rel="noreferer noopener"
@@ -112,9 +141,9 @@ const About = () => (
             </p>
           </div>
         </div>
-        <h2 className={styles.subHeader}>Highlights</h2>
-        <Marquee images={images} itemDelay={1.8} />
       </article>
+      <h2 className={styles.subHeader}>Highlights</h2>
+      <Marquee images={images} itemDelay={2.5} />
     </div>
   </>
 );
