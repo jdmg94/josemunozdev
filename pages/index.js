@@ -1,6 +1,7 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "../src/Header";
+import Container from '../src/Container'
 import Dock from "../src/Dock";
 
 const Space = dynamic(() => import("../src/Space"), {
@@ -8,7 +9,7 @@ const Space = dynamic(() => import("../src/Space"), {
 });
 
 const App = () => (
-  <>
+  <Container>
     <Head>
       <title>Jose Munoz Software Engineer</title>
       <link rel="icon" href="/favicon.ico" />
@@ -28,7 +29,7 @@ const App = () => (
     <Space />
     <Header />
     <Dock />
-  </>
+  </Container>
 );
 
 export default App;

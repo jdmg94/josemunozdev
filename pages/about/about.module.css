@@ -3,17 +3,19 @@
   width: 100%;
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: orange;
+  text-decoration-color: #ff7b00;
 }
 
 .subHeader {
   font-size: 3.5rem;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #ff7b00;
 }
 
 .article {
   flex: 1;
   margin: 0 auto;
-  width: 80%;
   font-weight: 300;
   display: flex;
   align-self: stretch;
@@ -22,6 +24,11 @@
   font-size: 23px;
   text-align: left;
   justify-content: flex-start;
+}
+
+.container {
+  margin-top: 1rem;
+  width: 80%;
 }
 
 .image {
@@ -62,9 +69,9 @@
 }
 
 @media (max-width: 600px) {
-  .article {
-    padding: 0 1rem;
-    transform: translateY(-23rem);
+  .container {
+    width: auto;
+    padding: 0 2rem;
   }
 
   .article > p span {

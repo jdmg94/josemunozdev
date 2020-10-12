@@ -75,6 +75,7 @@ const About = () => (
       />
     </Head>
     <BackButton href="/" />
+    <article className={styles.article}>
     <BasedGod
       style={{ height: "40vh" }}
       fallback={
@@ -90,13 +91,12 @@ const About = () => (
         </div>
       }
     />
-    <div style={{ textAlign: "center" }}>
-      <article className={styles.article}>
+      <div className={styles.container}>
         <h1 className={styles.header}>Who is José Muñoz?</h1>
         <div className={styles.level}>
           <div className={styles.levelItem}>
             <p>
-              I'm a software engineer, speaker,{" "}
+              I'm a software engineer, tech speaker, and{" "}
               <a
                 target="_blank"
                 rel="noreferer noopener"
@@ -104,7 +104,7 @@ const About = () => (
               >
                 Scrum Master
               </a>{" "}
-              and technology enthusiast based in Vancouver, BC. I work as a Lead
+              based in Vancouver, BC. I work as a Lead
               Frontend Engineer for Destiny Media. I have spoken at meetups
               about frontend development, code design patterns, and more. I
               contribute to OSS and write ocasionally on{" "}
@@ -141,10 +141,10 @@ const About = () => (
             </p>
           </div>
         </div>
-      </article>
+      </div>
       <h2 className={styles.subHeader}>Highlights</h2>
       <Marquee images={images} itemDelay={2.5} />
-    </div>
+      </article>
   </>
 );
 
