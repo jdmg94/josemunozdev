@@ -3,15 +3,7 @@ import styles from "./Header.module.css";
 import Container from "../Container";
 
 const Header = () => (
-  <Container
-    style={{
-      position: "absolute",
-      pointerEvents: "none",
-      touchEvents: "none",
-      width: "100vw",
-      height: '100vh',
-    }}
-  >
+  <Container className={styles.container}>
     <div className={styles.typewriter}>
       <h1>José Muñoz: Señor Engineer</h1>
     </div>

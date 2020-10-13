@@ -36,4 +36,13 @@ a {
   color: #86abd3
 }
 
+canvas {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 /* #38C298 */

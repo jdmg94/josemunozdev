@@ -6,22 +6,24 @@ import Loader from "../../src/Loader";
 import BackButton from "../../src/BackButton";
 import styles from "./about.module.css";
 
+const HeaderLoader = () => (
+  <div
+    style={{
+      flex: 1,
+      width: "100vw",
+      display: "flex",
+      minHeight: "40vh",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    <Loader />
+  </div>
+);
+
 const BasedGod = dynamic(() => import("../../src/BasedGod"), {
   ssr: false,
-  loading: () => (
-    <div
-      style={{
-        flex: 1,
-        width: '100vw',
-        minHeight: '40vh',
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <Loader />
-    </div>
-  ),
+  loading: HeaderLoader,
 });
 
 const Marquee = dynamic(() => import("../../src/Marquee"), {
@@ -68,29 +70,13 @@ const About = () => (
       <meta property="og:url" content="https://josemunoz.dev" />
       <meta
         property="og:description"
-        content="I'm a software developer, speaker, and technology enthusiast
-        based on Vancouver working as a Lead Frontend Engineer. I have
-        spoken on meetups in San Diego and Vancouver about frontend
-        development, design, and more."
+        content="I'm a software developer, tech speaker, and scrum master
+        based on Vancouver."
       />
     </Head>
     <BackButton href="/" />
     <article className={styles.article}>
-    <BasedGod
-      style={{ height: "40vh" }}
-      fallback={
-        <div style={{
-          flex: 1,
-          width: '100vw',
-          minHeight: '40vh',
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}>
-          <Loader />
-        </div>
-      }
-    />
+      <BasedGod style={{ height: "45vh" }} fallback={<Loader />} />
       <div className={styles.container}>
         <h1 className={styles.header}>Who is José Muñoz?</h1>
         <div className={styles.level}>
@@ -104,10 +90,10 @@ const About = () => (
               >
                 Scrum Master
               </a>{" "}
-              based in Vancouver, BC. I work as a Lead
-              Frontend Engineer for Destiny Media. I have spoken at meetups
-              about frontend development, code design patterns, and more. I
-              contribute to OSS and write ocasionally on{" "}
+              based in Vancouver, BC. I work as a Lead Frontend Engineer for
+              Destiny Media. I have spoken at meetups about frontend
+              development, code design patterns, and more. I contribute to OSS
+              and write ocasionally on{" "}
               <a
                 target="_blank"
                 rel="noreferer noopener"
@@ -144,7 +130,7 @@ const About = () => (
       </div>
       <h2 className={styles.subHeader}>Highlights</h2>
       <Marquee images={images} itemDelay={2.5} />
-      </article>
+    </article>
   </>
 );
 

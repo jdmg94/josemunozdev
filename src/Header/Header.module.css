@@ -5,7 +5,7 @@
   user-select: none;
   text-transform: uppercase;
   overflow: hidden;
-  filter: drop-shadow(0 0 0.75rem rgb(17, 17, 17));
+  filter: drop-shadow(0 0 0.75rem #646464);
   border-right: 0.15em solid #ff7b00;
   white-space: nowrap;
   letter-spacing: 0.15em; /* Adjust as needed */
@@ -21,7 +21,7 @@
   line-height: 4rem;
   text-align: center;
   transform: translateY(-3rem);
-  filter: drop-shadow(0 0 0.75rem rgb(17, 17, 17));
+  filter: drop-shadow(0 0 0.75rem #646464);
 }
 
 .actionButton > a {
@@ -35,6 +35,18 @@
   justify-content: center;
   color: #fff;
   font-size: 24px;
+}
+
+.container {
+  z-index: 9;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @keyframes typing {
