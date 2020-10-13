@@ -5,7 +5,8 @@
   user-select: none;
   text-transform: uppercase;
   overflow: hidden;
-  border-right: 0.15em solid orange;
+  filter: drop-shadow(0 0 0.75rem rgb(17, 17, 17));
+  border-right: 0.15em solid #ff7b00;
   white-space: nowrap;
   letter-spacing: 0.15em; /* Adjust as needed */
   animation-name: typing, blink-caret;
@@ -14,9 +15,18 @@
   animation-iteration-count: 1, infinite;
 }
 
+.mobileHeader {
+  display: none;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  transform: translateY(-3rem);
+  filter: drop-shadow(0 0 0.75rem rgb(17, 17, 17));
+}
+
 .actionButton > a {
   text-decoration: none;
-  background-color: orange;
+  background-color: #ff7b00;
   border-radius: 0.25rem;
   width: 13rem;
   height: 3rem;
@@ -42,7 +52,7 @@
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: #ff7b00;
   }
   100% {
     border-right: 0;
@@ -52,5 +62,13 @@
 @media (max-width: 767px) {
   .typewriter {
     display: none;
+  }
+
+  .mobileHeader {
+    display: block;
+  }
+
+  .actionButton {
+    transform: translateY(-2.5rem);
   }
 }
