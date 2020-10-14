@@ -8,7 +8,7 @@ const Space = dynamic(() => import("../src/Space"), {
 });
 
 const App = () => (
-  <Container>
+  <>
     <Head>
       <title>José Muñoz Software Engineer</title>
       <link rel="icon" href="/favicon.ico" />
@@ -26,7 +26,7 @@ const App = () => (
     <Space />
     <Header />
     <Dock />
-  </Container>
+  </>
 );
 
 export default App;

@@ -13,6 +13,7 @@ const HeaderLoader = () => (
       width: "100vw",
       display: "flex",
       minHeight: "40vh",
+      marginTop: "4rem",
       alignItems: "center",
       justifyContent: "center",
     }}
@@ -76,7 +77,10 @@ const About = () => (
     </Head>
     <BackButton href="/" />
     <article className={styles.article}>
-      <BasedGod style={{ height: "45vh" }} fallback={<Loader />} />
+      <BasedGod
+        style={{ height: "45vh", marginTop: "4rem" }}
+        fallback={<Loader />}
+      />
       <div className={styles.container}>
         <h1 className={styles.header}>Who is José Muñoz?</h1>
         <div className={styles.level}>
@@ -105,16 +109,15 @@ const About = () => (
             </p>
           </div>
           <img
-            width="15vw"
+            width="400px"
+            height="auto"
             src="/images/circuit-board.svg"
             alt="Personal Mission"
             className={styles.image}
           />
         </div>
         <div className={styles.level}>
-          <div className={styles.image}>
-            <Honduras />
-          </div>
+          <Honduras size={400} className={styles.image} />
           <div className={styles.levelItem}>
             <p>
               I was born in San Pedro Sula, Honduras. I speak Spanish and

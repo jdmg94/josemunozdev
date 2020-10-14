@@ -32,11 +32,7 @@
 }
 
 .image {
-  height: auto;
-  width: 25vw;
-  margin: 0.25rem;
   filter: drop-shadow(0 0 0.75rem #AAA);
-  /* box-shadow: 0 0 0.75rem #AAA; */
 }
 
 .level {
