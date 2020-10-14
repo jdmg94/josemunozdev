@@ -1,3 +1,4 @@
+import Head from "next/head";
 import dynamic from "next/dynamic";
 import Honduras from "react-honduras";
 
@@ -33,10 +34,6 @@ const Marquee = dynamic(() => import("../../src/Marquee"), {
 
 const images = [
   {
-    src: "/highlights/panama-canal.jpg",
-    alt: "The view of the Panama Canal",
-  },
-  {
     src: "/highlights/panama-peeps.jpg",
     alt: "my old team in Panama",
   },
@@ -45,7 +42,8 @@ const images = [
     alt: "Dan Abramov and I at React Conf 2018",
   },
   {
-    src: "/highlights/san-diego-meetup.jpg",
+    srcSet:
+      "/highlights/san-diego-meetup.webp,  /highlights/san-diego-meetup.jpg",
     alt: "My first talk on the San Diego meetup",
   },
   {
@@ -61,12 +59,26 @@ const images = [
 
 const About = () => (
   <>
+    <Head>
+      <link as="fetch" rel="prefetch" href="/based-god/scene.bin" />
+      <link as="fetch" rel="prefetch" href="/based-god/scene.gltf" />
+      <link
+        as="fetch"
+        rel="prefetch"
+        href="/based-god/textures/Stone_emissive.png"
+      />
+      <link
+        as="fetch"
+        rel="prefetch"
+        href="/based-god/textures/Crown_baseColor.png"
+      />
+    </Head>
     <SEO title="About Me" />
-    <BackButton href="/" aria-description="back button" />
+    <BackButton href="/" />
     <article className={styles.article}>
       <BasedGod
-        style={{ height: "45vh", marginTop: "4rem" }}
         fallback={<Loader />}
+        style={{ height: "45vh", marginTop: "4rem" }}
       />
       <div className={styles.container}>
         <h1 className={styles.header}>Who is José Muñoz?</h1>
