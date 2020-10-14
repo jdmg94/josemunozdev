@@ -1,7 +1,10 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import DockItem from "./DockItem";
+import Dev from "./icons/dev.svg";
+import Github from "./icons/github.svg";
+import Linkedin from "./icons/linkedin.svg";
+import Twitter from "./icons/twitter.svg";
 import styles from "./Dock.module.css";
 
 const Dock = () => (
@@ -9,24 +12,22 @@ const Dock = () => (
     <DockItem
       label="Twitter"
       href="https://twitter.com/jdmg94"
-      icon={
-        <FontAwesomeIcon icon={["fab", "twitter-square"]} color="#1DA1F2" />
-      }
+      icon={<Twitter color="#1DA1F2" />}
     />
     <DockItem
       label="LinkedIn"
       href="https://linkedin.com/in/jdmg94"
-      icon={<FontAwesomeIcon icon={["fab", "linkedin"]} color="#0073b1" />}
+      icon={<Linkedin color="#0073b1" />}
     />
     <DockItem
       label="Github"
       href="https://github.com/jdmg94"
-      icon={<FontAwesomeIcon icon={["fab", "github"]} color="#000" />}
+      icon={<Github color="#000" />}
     />
     <DockItem
       label="Blog"
       href="https://www.dev.to/jdmg94"
-      icon={<FontAwesomeIcon icon={["fab", "dev"]} color="#000" />}
+      icon={<Dev color="#000" />}
     />
   </div>
 );

@@ -1,7 +1,7 @@
-import Head from "next/head";
 import dynamic from "next/dynamic";
 import Honduras from "react-honduras";
 
+import SEO from "../../src/SEO";
 import Loader from "../../src/Loader";
 import BackButton from "../../src/BackButton";
 import styles from "./about.module.css";
@@ -12,7 +12,7 @@ const HeaderLoader = () => (
       flex: 1,
       width: "100vw",
       display: "flex",
-      minHeight: "40vh",
+      minHeight: "45vh",
       marginTop: "4rem",
       alignItems: "center",
       justifyContent: "center",
@@ -61,21 +61,8 @@ const images = [
 
 const About = () => (
   <>
-    <Head>
-      <title>About Me - José Muñoz</title>
-      <link rel="icon" href="/favicon.ico" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="About - José Muñoz" />
-      <meta property="og:image" content="/profile.jpeg" />
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:url" content="https://josemunoz.dev" />
-      <meta
-        property="og:description"
-        content="I'm a software developer, tech speaker, and scrum master
-        based on Vancouver."
-      />
-    </Head>
-    <BackButton href="/" />
+    <SEO title="About Me" />
+    <BackButton href="/" aria-description="back button" />
     <article className={styles.article}>
       <BasedGod
         style={{ height: "45vh", marginTop: "4rem" }}

@@ -19,7 +19,13 @@ const Marquee = ({ images = [], itemDelay = 1 }) => (
     >
       <div className={styles.track}>
         {images.map((props, index) => (
-          <Img key={`slide-${index}`} className={styles.slide} {...props} />
+          <Img
+            key={`slide-${index}`}
+            className={styles.slide}
+            height="100%"
+            width="auto"
+            {...props}
+          />
         ))}
       </div>
       <div className={styles.backup}>
@@ -27,6 +33,8 @@ const Marquee = ({ images = [], itemDelay = 1 }) => (
           <img
             key={`slide-backup-${index}`}
             className={styles.slide}
+            height="100%"
+            width="auto"
             {...props}
           />
         ))}
