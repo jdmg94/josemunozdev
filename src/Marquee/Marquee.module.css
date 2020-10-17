@@ -1,18 +1,16 @@
 .wrapper {
-  height: 50vh;
+  height: 80vh;
   width: 100vw;
   display: flex;
-  padding: 2rem 0;
-  overflow: hidden;
+  margin: 2rem 0;
   flex-direction: row;
   align-items: center;
+  flex-wrap: nowrap;
   justify-content: flex-start;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: unset;
 }
 
 .slide {
+  max-height: calc(80vh - 4rem);
   margin: 0 1rem;
   border-radius: 1rem;
   display: inline-block;
@@ -21,25 +19,9 @@
 
 .track {
   animation-name: marqueeAnimation;
-  animation-timing-function: inherit;
-  animation-duration: inherit;
-  animation-direction: inherit;
-  animation-iteration-count: inherit;
-  height: inherit;
-  display: inherit;
-  flex-direction: inherit;
-  align-items: inherit;
-  justify-content: inherit;
-}
-
-.backup {
-  animation-name: marqueeAnimation;
-  animation-timing-function: inherit;
-  animation-duration: inherit;
-  animation-direction: inherit;
-  animation-iteration-count: inherit;
-  height: inherit;
-  display: inherit;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: unset;
   flex-direction: inherit;
   align-items: inherit;
   justify-content: inherit;

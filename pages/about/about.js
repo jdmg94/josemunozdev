@@ -34,25 +34,24 @@ const Marquee = dynamic(() => import("../../src/Marquee"), {
 
 const images = [
   {
-    src: "/highlights/panama-peeps.jpg",
+    srcSet: "/images/panama-peeps.jpg, /images/panama-peeps.webp",
     alt: "my old team in Panama",
   },
   {
-    src: "/highlights/dan-2018.jpg",
+    srcSet: "/images/dan-2018.jpg, /images/dan-2018.webp",
     alt: "Dan Abramov and I at React Conf 2018",
   },
   {
-    srcSet:
-      "/highlights/san-diego-meetup.webp,  /highlights/san-diego-meetup.jpg",
+    srcSet: "/images/san-diego-meetup.jpg, /images/san-diego-meetup.webp",
     alt: "My first talk on the San Diego meetup",
   },
   {
-    src: "/highlights/amazon-2019.jpg",
+    srcSet: "/images/amazon-2019.jpg, /images/amazon-2019.webp",
     alt:
       "That's me on Amazon Campus San Diego, I gave a presentation on the Suspense API",
   },
   {
-    src: "/highlights/react-conf-2019-2.jpg",
+    srcSet: "/images/react-conf-2019-2.jpg, /images/react-conf-2019-2.webp",
     alt: "React Conf 2019 Group Picture",
   },
 ];
@@ -131,7 +130,7 @@ const About = () => (
         </div>
       </div>
       <h2 className={styles.subHeader}>Highlights</h2>
-      <Marquee images={images} itemDelay={2.5} />
+      <Marquee images={images} itemDelay={2.4} />
     </article>
   </>
 );

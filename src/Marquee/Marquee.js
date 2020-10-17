@@ -1,16 +1,9 @@
-import React, { Suspense } from "react";
+import React from "react";
+import Sources from "./ImageSources";
 import styles from "./Marquee.module.css";
-import Loader from "../Loader";
-import Img from "../Img";
 
-const Marquee = ({ images = [], itemDelay = 1 }) => (
-  <Suspense
-    fallback={
-      <div className={styles.wrapper} style={{ justifyContent: "center" }}>
-        <Loader />
-      </div>
-    }
-  >
+const Marquee = ({ images = [], itemDelay = 1 }) => {
+  return (
     <div
       className={styles.wrapper}
       style={{
@@ -18,29 +11,21 @@ const Marquee = ({ images = [], itemDelay = 1 }) => (
       }}
     >
       <div className={styles.track}>
-        {images.map((props, index) => (
-          <Img
-            key={`slide-${index}`}
-            className={styles.slide}
-            height="100%"
-            width="auto"
-            {...props}
-          />
+        {images.map(({ srcSet, alt }, index) => (
+          <picture key={`slide-${index}`}>
+            <Sources srcSet={srcSet} alt={alt} />
+          </picture>
         ))}
       </div>
-      <div className={styles.backup}>
-        {images.map((props, index) => (
-          <img
-            key={`slide-backup-${index}`}
-            className={styles.slide}
-            height="100%"
-            width="auto"
-            {...props}
-          />
+      <div className={styles.track}>
+        {images.map(({ srcSet, alt }, index) => (
+          <picture key={`slide-backup-${index}`}>
+            <Sources srcSet={srcSet} alt={alt} />
+          </picture>
         ))}
       </div>
     </div>
-  </Suspense>
-);
+  );
+};
 
 export default React.memo(Marquee);

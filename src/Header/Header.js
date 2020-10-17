@@ -9,7 +9,7 @@ const Header = () => (
     </div>
     <h1 className={styles.mobileHeader}>José Muñoz</h1>
     <div className={styles.actionButton} style={{ pointerEvents: "auto" }}>
-      <Link href="/about">More About Me</Link>
+      <Link href="/about">La Mera Verga</Link>
     </div>
   </Container>
 );
