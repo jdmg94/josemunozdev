@@ -7,20 +7,20 @@ const Marquee = ({ images = [], itemDelay = 1 }) => {
     <div
       className={styles.wrapper}
       style={{
-        animationDuration: `${Math.max(images.length * itemDelay, 7)}s`,
+        animationDuration: `${Math.ceil(images.length * itemDelay)}s`,
       }}
     >
       <div className={styles.track}>
         {images.map(({ srcSet, alt }, index) => (
           <picture key={`slide-${index}`}>
-            <Sources srcSet={srcSet} alt={alt} />
+            <Sources srcSet={srcSet} alt={alt} className={styles.slide} />
           </picture>
         ))}
       </div>
       <div className={styles.track}>
         {images.map(({ srcSet, alt }, index) => (
           <picture key={`slide-backup-${index}`}>
-            <Sources srcSet={srcSet} alt={alt} />
+            <Sources srcSet={srcSet} alt={alt} className={styles.slide} />
           </picture>
         ))}
       </div>

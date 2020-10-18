@@ -5,7 +5,6 @@
   user-select: none;
   text-transform: uppercase;
   overflow: hidden;
-  filter: drop-shadow(0 0 0.75rem #000);
   border-right: 0.15em solid #ff7b00;
   white-space: nowrap;
   letter-spacing: 0.15em; /* Adjust as needed */
@@ -13,11 +12,11 @@
   animation-duration: 3.5s, 0.75s;
   animation-timing-function: steps(26, end), step-end;
   animation-iteration-count: 1, infinite;
-  display: none;
+  -webkit-text-stroke: 3px solid #000;
 }
 
 .mobileHeader {
-  display: block;
+  display: none;
   font-size: 4rem;
   line-height: 4rem;
   text-align: center;
@@ -27,16 +26,17 @@
 
 .actionButton > a {
   text-decoration: none;
-  background-color: #068b0d;
+  background-color: #fff;
   border-radius: 0.25rem;
   width: 13rem;
   height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFF;
+  color: #444;
   font-size: 24px;
   filter: contrast(200%);
+  border-bottom: solid 3px #ff7b00;
 }
 
 .actionButton {

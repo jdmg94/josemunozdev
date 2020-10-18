@@ -2,32 +2,35 @@
   height: 80vh;
   width: 100vw;
   display: flex;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  overflow-x: hidden;
+  animation-duration: 10s;
 }
 
 .slide {
   max-height: calc(80vh - 4rem);
   margin: 0 1rem;
   border-radius: 1rem;
-  display: inline-block;
-  will-change: scroll-position;
+  display: block;
 }
 
 .track {
-  animation-name: marqueeAnimation;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: unset;
-  flex-direction: inherit;
-  align-items: inherit;
-  justify-content: inherit;
+  height: 100%;
+  width: fit-content !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  animation: marquee 10s infinite linear;
+  animation-duration: inherit;
+  /* background-color: #4f4; */
 }
 
-@keyframes marqueeAnimation {
+@keyframes marquee {
   from {
     transform: translateX(0);
   }

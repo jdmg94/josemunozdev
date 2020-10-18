@@ -130,8 +130,8 @@ const About = () => (
         </div>
       </div>
       <h2 className={styles.subHeader}>Highlights</h2>
-      <Marquee images={images} itemDelay={2.4} />
     </article>
+    <Marquee images={images} itemDelay={2.4} />
   </>
 );
 

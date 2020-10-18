@@ -1,8 +1,10 @@
+import Head from "next/head";
 import dynamic from "next/dynamic";
+
+import Ganja from "../public/images/ganja.svg";
 import SEO from "../src/SEO";
 import Header from "../src/Header";
 import Dock from "../src/Dock";
-import Head from "next/head";
 
 const Space = dynamic(() => import("../src/Space"), {
   ssr: false,
@@ -15,8 +17,9 @@ const App = () => (
       <link as="fetch" rel="prefetch" href="/space/scene.gltf" />
     </Head>
     <SEO />
-    <Space />
+    <Ganja style={{ position: 'absolute' }} />
     <Header />
+    <Space />
     <Dock />
   </>
 );
