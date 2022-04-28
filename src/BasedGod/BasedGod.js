@@ -9,8 +9,7 @@ edited by: Jose Munoz
 
 import * as THREE from "three";
 import React, { useRef, useLayoutEffect } from "react";
-import { draco } from "drei";
-import { useLoader, useFrame } from "react-three-fiber";
+import { useLoader, useFrame } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const centerObjectPosition = (object) =>
@@ -23,8 +22,7 @@ export default function Model({ scale = 1, ...props}) {
   const group = useRef();
   const { nodes, materials } = useLoader(
     GLTFLoader,
-    "/based-god/scene.gltf",
-    draco()
+    "/based-god/scene.gltf"
   );
 
   useFrame(() => {

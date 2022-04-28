@@ -1,6 +1,6 @@
-import { HTML } from "drei";
+import { Html as HTML } from "@react-three/drei";
 import React, { Suspense } from "react";
-import { Canvas } from "react-three-fiber";
+import { Canvas } from "@react-three/fiber";
 
 const Scene = ({
   children,

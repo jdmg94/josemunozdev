@@ -1,5 +1,5 @@
 import React from "react";
-import { OrbitControls } from "drei";
+import { OrbitControls } from "@react-three/drei";
 import Scene from "../Scene";
 import Space from "./Space";
 
