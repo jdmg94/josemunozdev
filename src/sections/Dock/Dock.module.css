@@ -1,0 +1,46 @@
+.dockWrapper {
+  width: 35vw;
+  height: 6rem;
+  display: flex;
+  bottom: 1.5rem;
+  position: fixed;
+  font-size: 4em;
+  cursor: pointer;
+  align-self: center;
+  align-items: center;  
+  flex-direction: row;
+  justify-content: space-evenly;
+  transition: all 0.3s ease-in-out;
+
+background: rgba( 255, 255, 255, 0.4 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 3px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+
+}
+
+
+@media (min-width: 1600px) and (max-width: 1900px) {
+  .dockWrapper {
+    width: 50vw;
+  }
+}
+
+
+@media (min-width: 900px) and (max-width: 1600px) {
+  .dockWrapper {
+    width: 80vw;
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 600px) {
+  .dockWrapper {
+    width: 95vw;
+    font-size: 3em;
+    touch-action: none;
+    background-color: #f0f8ffF0;
+  }
+}

@@ -1,0 +1,88 @@
+.typewriter h1 {  
+  --cursor-width: 0.4rem; /* Adjust as needed */
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  text-transform: uppercase;  
+  filter: drop-shadow(0 0 0.75rem #646464);
+  border-right: var(--cursor-width) solid #ff7b00;
+  white-space: nowrap;
+  letter-spacing: var(--cursor-width);
+  animation-name: typing, blink-caret;
+  animation-duration: 3.5s, 0.75s;
+  animation-timing-function: steps(26, end), step-end;
+  animation-iteration-count: 1, infinite;  
+}
+
+.mobileHeader {
+  display: none;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  transform: translateY(-3rem);
+  filter: drop-shadow(0 0 0.75rem #646464);
+}
+
+.actionButton > a {
+  text-decoration: none;
+  background-color: #ff7b00;
+  border-radius: 0.25rem;
+  width: 13rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+.container {
+  z-index: 9;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;    
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff7b00;
+  }
+  100% {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .typewriter {
+    display: none;
+  }
+
+  .mobileHeader {
+    display: block;
+  }
+
+  .actionButton {
+    transform: translateY(-2.5rem);
+  }
+}
