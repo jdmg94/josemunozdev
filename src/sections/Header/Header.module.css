@@ -1,7 +1,11 @@
+.typewriter {
+  animation-play-state: running;
+}
+
 .typewriter h1 {  
   --cursor-width: 0.4rem; /* Adjust as needed */
   font-size: 50px;
-  line-height: 50px;
+  line-height: 55px;
   font-weight: 600;
   cursor: pointer;
   user-select: none;
@@ -11,10 +15,11 @@
   border-right: var(--cursor-width) solid #ff7b00;
   white-space: nowrap;
   letter-spacing: var(--cursor-width);
-  animation-name: typing, blink-caret;
-  animation-duration: 3.5s, 0.75s;
+  animation-name: typing, blink-caret;  
+  animation-duration: 3.5s, 0.75s;  
   animation-timing-function: steps(26, end), step-end;
-  animation-iteration-count: 1, infinite;  
+  animation-iteration-count: 1, infinite;
+  animation-play-state: inherit;
 }
 
 .mobileHeader {
@@ -24,19 +29,6 @@
   text-align: center;
   transform: translateY(-3rem);
   filter: drop-shadow(0 0 0.75rem #646464);
-}
-
-.actionButton > a {
-  text-decoration: none;
-  background-color: #ff7b00;
-  border-radius: 0.25rem;
-  width: 13rem;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 24px;
 }
 
 .container {

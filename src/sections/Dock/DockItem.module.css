@@ -37,13 +37,8 @@
 }
 
 @media (max-width: 600px) {
-  .dockItem,
-  .dockLabel {
-    color: #111;
-  }
-
   .dockItem {
-    height: 3rem !important;
-    width: 3rem !important;
+    height: 3.5rem !important;
+    width: 3.5rem !important;
   }
 }

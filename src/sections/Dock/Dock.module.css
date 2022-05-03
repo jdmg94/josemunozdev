@@ -1,5 +1,5 @@
 .dockWrapper {
-  width: 35vw;
+  width: 30vw;
   height: 6rem;
   display: flex;
   bottom: 1.5rem;
@@ -9,7 +9,8 @@
   align-self: center;
   align-items: center;  
   flex-direction: row;
-  justify-content: space-evenly;
+  user-select: none;
+  justify-content: space-around;
   transition: all 0.3s ease-in-out;
 
 background: rgba( 255, 255, 255, 0.4 );
@@ -24,14 +25,14 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 @media (min-width: 1600px) and (max-width: 1900px) {
   .dockWrapper {
-    width: 50vw;
+    width: 45vw;
   }
 }
 
 
 @media (min-width: 900px) and (max-width: 1600px) {
   .dockWrapper {
-    width: 80vw;
+    width: 70vw;
     font-size: 4em;
   }
 }
@@ -40,7 +41,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   .dockWrapper {
     width: 95vw;
     font-size: 3em;
-    touch-action: none;
-    background-color: #f0f8ffF0;
+    touch-action: none;    
   }
 }

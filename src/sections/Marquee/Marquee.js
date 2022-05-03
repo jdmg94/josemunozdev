@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+
 import styles from "./Marquee.module.css";
 import Loader from "../../components/Loader";
 import Img from "../../components/Img";
