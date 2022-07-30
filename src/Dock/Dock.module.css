@@ -10,8 +10,8 @@
   align-items: center;
   border-radius: 1rem;
   flex-direction: row;
-  background-color: #f0f8ffD0;
-  justify-content: space-evenly;
+  background-color: #5b5c5d5b;
+  justify-content: space-around;
   transition: all 0.3s ease-in-out;
 }
 
@@ -23,9 +23,9 @@
 }
 
 
-@media (min-width: 900px) and (max-width: 1600px) {
+@media (min-width: 800px) and (max-width: 1600px) {
   .dockWrapper {
-    width: 80vw;
+    width: 70vw;
     font-size: 4em;
   }
 }
@@ -35,6 +35,5 @@
     width: 95vw;
     font-size: 3em;
     touch-action: none;
-    background-color: #f0f8ffF0;
   }
 }

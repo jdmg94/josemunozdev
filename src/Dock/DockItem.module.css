@@ -18,15 +18,14 @@
   font-size: 0.8rem;
   text-align: center;
   margin: 0;
-  color: #444;
 }
 
 .dockItem > svg {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .dockItem > svg:hover {
-  transform: translateY(-1rem);
+  transform: translateY(-1rem) scale(1.2);
 }
 
 @media (min-width: 900px) and (max-width: 1600px) {
@@ -37,13 +36,8 @@
 }
 
 @media (max-width: 600px) {
-  .dockItem,
-  .dockLabel {
-    color: #111;
-  }
-
   .dockItem {
-    height: 3rem !important;
-    width: 3rem !important;
+    height: 3.5rem !important;
+    width: 3.5rem !important;
   }
 }

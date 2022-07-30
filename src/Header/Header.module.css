@@ -6,13 +6,18 @@
   text-transform: uppercase;
   overflow: hidden;
   filter: drop-shadow(0 0 0.75rem #646464);
-  border-right: 0.15em solid #ff7b00;
-  white-space: nowrap;
+  /* border-right: 4px solid #fffffffd; */
+  /* white-space: nowrap; */
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation-name: typing, blink-caret;
+  animation: slideUp 0.5s;
+  /* animation-name: typing, blink-caret;
   animation-duration: 3.5s, 0.75s;
   animation-timing-function: steps(26, end), step-end;
-  animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite; */
+}
+
+.typewriter > h1:last-child {
+  animation-duration: 0.8s;
 }
 
 .mobileHeader {
@@ -24,10 +29,12 @@
   filter: drop-shadow(0 0 0.75rem #646464);
 }
 
-.actionButton > a {
-  text-decoration: none;
-  background-color: #ff7b00;
+.actionButton {
+  cursor: pointer;
+  /* text-decoration: none; */
+  background-color: #36363591;
   border-radius: 0.25rem;
+  border: none;
   width: 13rem;
   height: 3rem;
   display: flex;
@@ -49,6 +56,15 @@
   flex-direction: column;
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(3rem)
+  }
+  to {
+    transform: translateY(0rem);
+  }
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -64,7 +80,7 @@
     border-color: transparent;
   }
   50% {
-    border-color: #ff7b00;
+    border-color: #fffffffd;
   }
   100% {
     border-right: 0;
@@ -72,15 +88,13 @@
 }
 
 @media (max-width: 767px) {
+  .typewriter h1 {
+    margin: 0 auto;    
+  }
+
   .typewriter {
-    display: none;
+    transform: translateY(-3rem);
   }
 
-  .mobileHeader {
-    display: block;
-  }
 
-  .actionButton {
-    transform: translateY(-2.5rem);
-  }
 }

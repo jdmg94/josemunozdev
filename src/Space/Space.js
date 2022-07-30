@@ -33,7 +33,7 @@ export default function Model(props) {
 
     const spaceReset = setInterval(() => {
       shouldResetAnimation.current = true;
-    }, 60000);
+    }, 35000);
 
     return () => {
       if (spaceReset) clearInterval(spaceReset);
