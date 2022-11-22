@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "drei": "^1.5.6",
-    "next": "^9.5.3",
+    "next": "^13.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-honduras": "^1.0.1",
@@ -26,7 +26,7 @@
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
     "@storybook/addons": "^6.0.21",
-    "@storybook/react": "^6.0.21",
+    "@storybook/react": "^6.5.13",
     "@storybook/storybook-deployer": "^2.8.6",
     "@svgr/webpack": "^5.4.0",
     "babel-loader": "^8.1.0",
