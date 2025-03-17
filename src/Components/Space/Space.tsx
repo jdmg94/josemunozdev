@@ -1,10 +1,13 @@
-import { Group } from "three";
+import { Group, Object3D, Points } from "three";
 import { useRef, useLayoutEffect } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, Html } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { centerObjectPosition } from "../../utils/centerObjectPosition";
 
 const RESET_TIMEOUT = 20_000;
+function isPointsMesh(object?: Object3D): object is Points {
+  return object?.type === "Points";
+}
 
 function Model() {
   const group = useRef<Group>(null);
@@ -36,6 +39,14 @@ function Model() {
       camera.position.x -= 0.1125;
     }
   });
+
+  if (!isPointsMesh(nodes.mesh_0)) {
+    return (
+      <Html>
+        <span>Unable to load 3D model!</span>
+      </Html>
+    );
+  }
 
   return (
     <group ref={group} dispose={null}>

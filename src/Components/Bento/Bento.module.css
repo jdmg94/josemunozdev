@@ -1,0 +1,95 @@
+:root {
+    --icon-size-small: 1.125rem;
+    --icon-size-med: 1.5rem;
+    --corner-radius: 1rem;
+    --card-height: calc(20vh - 8px);
+    --card-padding: 16px;
+    --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    height: 40vh;
+    width: 50vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    display: flex;
+}
+
+.largeBox {
+    border-radius: var(--corner-radius);
+    height: var(--card-height);
+    width: calc(70% - 40px);
+    padding: var(--card-padding);
+}
+
+.smallBox {
+    padding: var(--card-padding);
+    border-radius: var(--corner-radius);
+    height: var(--card-height);
+    width: calc(30% - 40px);
+    background-color: #8884;
+}
+
+.fullWidth {
+    pointer-events: all;
+    padding: var(--card-padding);
+    border-radius: var(--corner-radius);
+    height: 2rem;
+    width: calc(100% - 40px);
+    background-color: #8884;
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+
+.fullWidth > * {
+    cursor: pointer;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+}
+
+.spacedOut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gradient {
+    background: linear-gradient(to bottom right, #00aa, #b19cd9aa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileCircle {
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+    background-image: url("/profile.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.glassCard {
+    background-color: #aaa4;
+    box-shadow: var(--card-shadow);
+    backdrop-filter: blur(2px);
+}
+
+.icon {
+    height: var(--icon-size-small);
+    width: var(--icon-size-small);
+}
+
+.socialIcon {
+    height: var(--icon-size-med);
+    width: var(--icon-size-med);
+}

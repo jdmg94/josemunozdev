@@ -1,14 +1,15 @@
 import "./App.css";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Html } from "@react-three/drei";
 import Scene from "./Components/Scene";
 import Space from "./Components/Space";
+import Bento from "./Components/Bento";
 
 function App() {
   return (
-    <Scene
-      style={{ position: "absolute" }}
-      camera={{ position: [50, 50, 50], far: 400 }}
-    >
+    <Scene>
+      <Html center className="background">
+        <Bento />
+      </Html>
       <Space />
       <OrbitControls />
     </Scene>
