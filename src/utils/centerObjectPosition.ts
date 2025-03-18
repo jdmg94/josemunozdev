@@ -1,7 +1,7 @@
-import * as THREE from "three";
+import { Group, Box3 } from "three";
 
-export const centerObjectPosition = (object: THREE.Group) =>
-  new THREE.Box3()
+export const centerObjectPosition = (object: Group) =>
+  new Box3()
     .setFromObject(object)
     .getCenter(object.position)
     .multiplyScalar(-1);

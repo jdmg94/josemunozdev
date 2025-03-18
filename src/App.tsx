@@ -1,19 +1,16 @@
-import "./App.css";
-import { OrbitControls, Html } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import Scene from "./Components/Scene";
 import Space from "./Components/Space";
 import Bento from "./Components/Bento";
 
-function App() {
-  return (
-    <Scene>
-      <Html center className="background">
-        <Bento />
-      </Html>
+const App = () => (
+  <>
+    <Scene fallback={<h1>Failed to load 3D Model!</h1>}>
       <Space />
       <OrbitControls />
     </Scene>
-  );
-}
+    <Bento />
+  </>
+);
 
 export default App;
