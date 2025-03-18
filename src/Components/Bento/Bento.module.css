@@ -14,6 +14,7 @@
     flex-wrap: wrap;
     gap: 8px;
     display: flex;
+    touch-action: none;
 }
 
 .largeBox {
@@ -35,12 +36,11 @@
     pointer-events: all;
     padding: var(--card-padding);
     border-radius: var(--corner-radius);
-    height: 2rem;
     width: calc(100% - 40px);
     background-color: #8884;
-    align-items: center;
     display: flex;
     gap: 8px;
+    flex-direction: column;
 }
 
 .fullWidth > * {
@@ -49,7 +49,7 @@
 
 .title {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin: 0;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .gradient {
-    background: linear-gradient(to bottom right, #00aa, #b19cd9aa);
+    background: linear-gradient(to bottom right, #00ac, #b19cd9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,6 +82,8 @@
     background-color: #aaa4;
     box-shadow: var(--card-shadow);
     backdrop-filter: blur(2px);
+    touch-action: all;
+    user-select: none;
 }
 
 .icon {
@@ -92,4 +94,19 @@
 .socialIcon {
     height: var(--icon-size-med);
     width: var(--icon-size-med);
+}
+
+.titleBar {
+    padding-bottom: 16px;
+}
+
+.clickable {
+    margin: 8px;
+    cursor: pointer !important;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

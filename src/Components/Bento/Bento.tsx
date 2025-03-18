@@ -6,14 +6,15 @@ import {
   FiBookOpen,
   FiLinkedin,
   FiGithub,
+  FiExternalLink,
 } from "react-icons/fi";
-import { FaDev } from "react-icons/fa";
+import { FaDev, FaMastodon } from "react-icons/fa";
 
 const Bento = () => (
   <div className={styles.container}>
     <div className={clsx(styles.largeBox, styles.glassCard)}>
-      <div className={styles.spacedOut}>
-        <h1 className={styles.title}>Jose David Munoz</h1>
+      <div className={clsx(styles.spacedOut, styles.titleBar)}>
+        <h1 className={styles.title}>José David Muñoz</h1>
         <FiUser className={styles.icon} />
       </div>
     </div>
@@ -21,42 +22,81 @@ const Bento = () => (
       <div className={styles.profileCircle}></div>
     </div>
     <div className={clsx(styles.smallBox, styles.glassCard)}>
-      <div className={styles.spacedOut}>
+      <div className={clsx(styles.spacedOut, styles.titleBar)}>
         <h2 className={styles.title}>Projects</h2>
         <FiCode className={styles.icon} />
       </div>
+      <a
+        href="https://jdmg94.github.io/fast-trivia"
+        target="_blank"
+        rel="noreferrer noopener"
+        className={clsx(styles.spacedOut, styles.clickable)}
+      >
+        <span>3D Trivia</span>
+        <FiExternalLink className={styles.icon} />
+      </a>
+      <a
+        href="https://github.com/jdmg94/Hue-Sync"
+        target="_blank"
+        rel="noreferrer noopener"
+        className={clsx(styles.spacedOut, styles.clickable)}
+      >
+        <span>IoT interface for Phillips Hue</span>
+        <FiExternalLink className={styles.icon} />
+      </a>
+      <a
+        href="https://ibpm.superiortech.co"
+        target="_blank"
+        rel="noreferrer noopener"
+        className={clsx(styles.spacedOut, styles.clickable)}
+      >
+        <span>Smart Beat Detection on iOS</span>
+        <FiExternalLink className={styles.icon} />
+      </a>
+      {/* https://ibpm.superiortech.co/ */}
     </div>
     <div className={clsx(styles.largeBox, styles.glassCard)}>
-      <div className={styles.spacedOut}>
-        <h3 className={styles.title}>Articles</h3>
+      <div className={clsx(styles.spacedOut, styles.titleBar)}>
+        <h3 className={styles.title}>Posts</h3>
         <FiBookOpen className={styles.icon} />
       </div>
     </div>
     <div className={clsx(styles.fullWidth, styles.glassCard)}>
-      <a
-        rel="noreferrer noopener"
-        target="_blank"
-        className={styles.socialIcon}
-        href="https://www.linkedin.com/in/josemunozdev"
-      >
-        <FiLinkedin size="24px" />
-      </a>
-      <a
-        rel="noreferrer noopener"
-        target="_blank"
-        className={styles.socialIcon}
-        href="https://www.github.com/jdmg94"
-      >
-        <FiGithub size="24px" />
-      </a>
-      <a
-        rel="noreferrer noopener"
-        target="_blank"
-        className={styles.socialIcon}
-        href="https://dev.to/josemunoz"
-      >
-        <FaDev size="24px" />
-      </a>
+      <h4 className={styles.title}>Connect With Me</h4>
+      <div className={styles.row}>
+        <a
+          rel="noreferrer noopener"
+          target="_blank"
+          className={clsx(styles.socialIcon, styles.clickable)}
+          href="https://www.github.com/jdmg94"
+        >
+          <FiGithub size="24px" />
+        </a>
+        <a
+          rel="noreferrer noopener"
+          target="_blank"
+          className={clsx(styles.socialIcon, styles.clickable)}
+          href="https://www.linkedin.com/in/josemunozdev"
+        >
+          <FiLinkedin size="24px" />
+        </a>
+        <a
+          rel="noreferrer noopener"
+          target="_blank"
+          className={clsx(styles.socialIcon, styles.clickable)}
+          href="https://dev.to/josemunoz"
+        >
+          <FaDev size="24px" />
+        </a>
+        <a
+          rel="noreferrer noopener"
+          target="_blank"
+          className={clsx(styles.socialIcon, styles.clickable)}
+          href="https://techhub.social/@josemunoz"
+        >
+          <FaMastodon size="24px" />
+        </a>
+      </div>
     </div>
   </div>
 );
