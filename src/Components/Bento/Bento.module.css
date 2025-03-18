@@ -2,7 +2,7 @@
     --icon-size-small: 1.125rem;
     --icon-size-med: 1.5rem;
     --corner-radius: 1rem;
-    --card-height: calc(20vh - 8px);
+    --card-min-height: calc(10vh - 8px);
     --card-padding: 16px;
     --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
@@ -30,16 +30,16 @@
 
 .largeBox {
     border-radius: var(--corner-radius);
-    height: var(--card-height);
     width: calc(70% - 40px);
     padding: var(--card-padding);
+    min-height: var(--card-min-height);
 }
 
 .smallBox {
     padding: var(--card-padding);
     border-radius: var(--corner-radius);
-    height: var(--card-height);
     width: calc(30% - 40px);
+    min-height: var(--card-min-height);
     background-color: #8884;
 }
 
@@ -62,8 +62,6 @@
 
 .spacedOut {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -91,6 +89,8 @@
     backdrop-filter: blur(2px);
     user-select: none;
     border: 1px solid #fff2;
+    display: flex;
+    flex-direction: column;
 }
 
 .icon {
@@ -101,6 +101,7 @@
 .socialIcon {
     height: var(--icon-size-med);
     width: var(--icon-size-med);
+    margin: 0px 8px !important;
 }
 
 .titleBar {
@@ -108,13 +109,35 @@
 }
 
 .clickable {
-    margin: 8px;
     pointer-events: all;
-    cursor: pointer !important;
+    cursor: pointer;
+}
+
+a.clickable {
+    margin: 8px 0px;
 }
 
 .row {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.divider {
+    height: 1px;
+    background-color: #fff2;
+    width: calc(100% - 32px);
+    margin: 16px auto 8px auto;
+}
+
+.heading {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.subHeading {
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin: 0;
 }

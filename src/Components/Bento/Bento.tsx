@@ -18,47 +18,68 @@ const Bento = () => (
           <h1 className={styles.title}>José David Muñoz</h1>
           <FiUser className={styles.icon} />
         </div>
+        <p>
+          lorem ipsum dolor sit amet consecutir. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
       </div>
       <div className={clsx(styles.smallBox, styles.gradient)}>
         <div className={styles.profileCircle}></div>
       </div>
-      <div className={clsx(styles.smallBox, styles.glassCard)}>
+      <div
+        className={clsx(styles.smallBox, styles.glassCard, styles.spacedOut)}
+      >
         <div className={clsx(styles.spacedOut, styles.titleBar)}>
           <h2 className={styles.title}>Projects</h2>
           <FiCode className={styles.icon} />
         </div>
-        <a
-          href="https://jdmg94.github.io/fast-trivia"
-          target="_blank"
-          rel="noreferrer noopener"
-          className={clsx(styles.spacedOut, styles.clickable)}
-        >
-          <span>3D Trivia</span>
-          <FiExternalLink className={styles.icon} />
-        </a>
-        <a
-          href="https://github.com/jdmg94/Hue-Sync"
-          target="_blank"
-          rel="noreferrer noopener"
-          className={clsx(styles.spacedOut, styles.clickable)}
-        >
-          <span>IoT interface for Phillips Hue</span>
-          <FiExternalLink className={styles.icon} />
-        </a>
-        <a
-          href="https://ibpm.superiortech.co"
-          target="_blank"
-          rel="noreferrer noopener"
-          className={clsx(styles.spacedOut, styles.clickable)}
-        >
-          <span>Smart Beat Detection on iOS</span>
-          <FiExternalLink className={styles.icon} />
-        </a>
+        <div>
+          <a
+            href="https://jdmg94.github.io/fast-trivia"
+            target="_blank"
+            rel="noreferrer noopener"
+            className={clsx(styles.spacedOut, styles.clickable, styles.row)}
+          >
+            <span>3D Trivia</span>
+            <FiExternalLink className={styles.icon} />
+          </a>
+          <a
+            href="https://github.com/jdmg94/Hue-Sync"
+            target="_blank"
+            rel="noreferrer noopener"
+            className={clsx(styles.spacedOut, styles.clickable, styles.row)}
+          >
+            <span>IoT interface for Phillips Hue</span>
+            <FiExternalLink className={styles.icon} />
+          </a>
+          <a
+            href="https://ibpm.superiortech.co"
+            target="_blank"
+            rel="noreferrer noopener"
+            className={clsx(styles.clickable, styles.spacedOut, styles.row)}
+          >
+            <span>Smart Beat Detection on iOS</span>
+            <FiExternalLink className={styles.icon} />
+          </a>
+        </div>
       </div>
       <div className={clsx(styles.largeBox, styles.glassCard)}>
         <div className={clsx(styles.spacedOut, styles.titleBar)}>
           <h3 className={styles.title}>Posts</h3>
           <FiBookOpen className={styles.icon} />
+        </div>
+        <div className={styles.column}>
+          <p className={styles.heading}>Lorem Ipsum</p>
+          <p className={styles.subHeading}>sit amet consecutir</p>
+        </div>
+        <div className={styles.divider} />
+        <div className={styles.column}>
+          <p className={styles.heading}>Lorem Ipsum</p>
+          <p className={styles.subHeading}>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </p>
         </div>
       </div>
       <div className={clsx(styles.fullWidth, styles.glassCard)}>
