@@ -1,0 +1,154 @@
+:root {
+    --icon-size-small: 1.125rem;
+    --icon-size-med: 1.5rem;
+    --corner-radius: 1rem;
+    --card-min-height: calc(10vh - 8px);
+    --card-padding: 16px;
+    --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --gradient-rotation: 145deg;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.container {
+    width: 50vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    display: flex;
+}
+
+.largeBox {
+    border-radius: var(--corner-radius);
+    width: calc(70% - 40px);
+    padding: var(--card-padding);
+    min-height: var(--card-min-height);
+}
+
+.smallBox {
+    padding: var(--card-padding);
+    border-radius: var(--corner-radius);
+    width: calc(30% - 40px);
+    min-height: var(--card-min-height);
+    background-color: #8884;
+}
+
+.fullWidth {
+    pointer-events: all;
+    padding: var(--card-padding);
+    border-radius: var(--corner-radius);
+    width: calc(100% - 40px);
+    background-color: #8884;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.spacedOut {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gradient {
+    background: linear-gradient(var(--gradient-rotation), #00ac, #b19cd9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileCircle {
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+    background-image: url("/profile.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.glassCard {
+    background-color: #aaa4;
+    box-shadow: var(--card-shadow);
+    backdrop-filter: blur(2px);
+    user-select: none;
+    border: 1px solid #fff2;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    height: var(--icon-size-small);
+    width: var(--icon-size-small);
+}
+
+.socialIcon {
+    height: var(--icon-size-med);
+    width: var(--icon-size-med);
+    margin: 0px 8px !important;
+}
+
+.titleBar {
+    padding-bottom: 16px;
+}
+
+.clickable {
+    pointer-events: all;
+    cursor: pointer;
+}
+
+a.clickable {
+    margin: 8px 0px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.divider {
+    height: 1px;
+    background-color: #fff2;
+    width: calc(100% - 32px);
+    margin: 16px auto 8px auto;
+}
+
+.heading {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.subHeading {
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin: 0;
+    color: #aaa;
+}
+
+.clean {
+    text-decoration: none !important;
+}
+
+.centerAlign {
+    align-items: center;
+}
