@@ -5,6 +5,7 @@
     --card-min-height: calc(10vh - 8px);
     --card-padding: 16px;
     --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --gradient-rotation: 145deg;
 }
 
 .background {
@@ -66,7 +67,7 @@
 }
 
 .gradient {
-    background: linear-gradient(to bottom right, #00ac, #b19cd9);
+    background: linear-gradient(var(--gradient-rotation), #00ac, #b19cd9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,10 +135,20 @@ a.clickable {
     font-weight: 600;
     font-size: 1rem;
     margin-bottom: 4px;
+    color: #fff;
 }
 
 .subHeading {
     font-weight: 400;
     font-size: 0.8rem;
     margin: 0;
+    color: #aaa;
+}
+
+.clean {
+    text-decoration: none !important;
+}
+
+.centerAlign {
+    align-items: center;
 }

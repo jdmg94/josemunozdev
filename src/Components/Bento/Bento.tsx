@@ -19,10 +19,11 @@ const Bento = () => (
           <FiUser className={styles.icon} />
         </div>
         <p>
-          lorem ipsum dolor sit amet consecutir. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          I'm a full-stack developer with a passion for creating beautiful,
+          functional websites and applications. With over 9 years of experience
+          in web and mobile development I'm a specialist in React.js and
+          creating high quality user experieces using emerging technologies like
+          LLMs and diffusion models.
         </p>
       </div>
       <div className={clsx(styles.smallBox, styles.gradient)}>
@@ -70,17 +71,39 @@ const Bento = () => (
           <h3 className={styles.title}>Posts</h3>
           <FiBookOpen className={styles.icon} />
         </div>
-        <div className={styles.column}>
-          <p className={styles.heading}>Lorem Ipsum</p>
-          <p className={styles.subHeading}>sit amet consecutir</p>
-        </div>
+        <a
+          target="_blank"
+          className={clsx(styles.clean, styles.clickable)}
+          href="https://dev.to/josemunoz/pimp-your-cli-3i5e"
+        >
+          <div className={styles.column}>
+            <div className={clsx(styles.spacedOut, styles.centerAlign)}>
+              <p className={styles.heading}>Pimp Your CLI</p>
+              <FiExternalLink className={styles.icon} />
+            </div>
+            <p className={styles.subHeading}>
+              A comprehensive guide to terminal tools that improve your
+              productivity.
+            </p>
+          </div>
+        </a>
         <div className={styles.divider} />
-        <div className={styles.column}>
-          <p className={styles.heading}>Lorem Ipsum</p>
-          <p className={styles.subHeading}>
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
-        </div>
+        <a
+          target="_blank"
+          className={clsx(styles.clean, styles.clickable)}
+          href="https://dev.to/josemunoz/webrtc-and-react-native-52pi"
+        >
+          <div className={styles.column}>
+            <div className={clsx(styles.spacedOut, styles.centerAlign)}>
+              <p className={styles.heading}>WebRTC and React Native</p>
+              <FiExternalLink className={styles.icon} />
+            </div>
+            <p className={styles.subHeading}>
+              A brief view into how WebRTC works, and how to setup mobile apps
+              for WebRTC.
+            </p>
+          </div>
+        </a>
       </div>
       <div className={clsx(styles.fullWidth, styles.glassCard)}>
         <h4 className={styles.title}>Connect With Me</h4>
