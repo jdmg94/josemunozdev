@@ -10,6 +10,7 @@
 
 .background {
     width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,6 +161,10 @@ a.clickable {
     --card-min-height: calc(15vh - 8px);
   }
 
+  .background {
+    height: auto;
+  }
+
   .container {
     margin: 16px 0px;
     width: 90vw;
@@ -199,12 +204,8 @@ a.clickable {
 
 /* tablet */
 @media screen and (min-width: 600px) and (max-width: 1280px) {
-  .background {
-    height: 100vh;
-  }
-
   .container {
-    width: 90vw;
+    width: 80vw;
   }
 }
 
@@ -213,17 +214,18 @@ a.clickable {
 
 
 /* macbook */
-/* @media screen and (min-width: 1280px) and (max-width: 1536px) {} */
+@media screen and (min-width: 1024px) and (max-width: 1536px) {
+  .container {
+     width: 60vw;
+  }
+
+}
 
 
 /* widescreen */
 @media screen and (min-width: 1536px) {
   .container {
-     width: 60vw;
-  }
-
-  .background {
-    height: 100vh;
+     width: 40vw;
   }
 }
 
