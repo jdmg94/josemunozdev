@@ -9,8 +9,8 @@
 }
 
 .background {
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +22,8 @@
 }
 
 .container {
-    width: 50vw;
+    height: auto;
+    width: 70vw;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 8px;
@@ -30,15 +31,11 @@
 }
 
 .largeBox {
-    border-radius: var(--corner-radius);
     width: calc(70% - 40px);
-    padding: var(--card-padding);
     min-height: var(--card-min-height);
 }
 
 .smallBox {
-    padding: var(--card-padding);
-    border-radius: var(--corner-radius);
     width: calc(30% - 40px);
     min-height: var(--card-min-height);
     background-color: #8884;
@@ -46,8 +43,6 @@
 
 .fullWidth {
     pointer-events: all;
-    padding: var(--card-padding);
-    border-radius: var(--corner-radius);
     width: calc(100% - 40px);
     background-color: #8884;
     display: flex;
@@ -68,6 +63,8 @@
 
 .gradient {
     background: linear-gradient(var(--gradient-rotation), #00ac, #b19cd9);
+    border-radius: var(--corner-radius);
+    padding: var(--card-padding);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,6 +72,7 @@
 
 .profileCircle {
     height: 80%;
+    min-height: var(--card-min-height);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     background-color: #fff;
@@ -91,6 +89,8 @@
     user-select: none;
     border: 1px solid #fff2;
     display: flex;
+    border-radius: var(--corner-radius);
+    padding: var(--card-padding);
     flex-direction: column;
 }
 
@@ -152,3 +152,81 @@ a.clickable {
 .centerAlign {
     align-items: center;
 }
+
+ /* responsive breakpoints */
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  :root {
+    --card-min-height: calc(15vh - 8px);
+  }
+
+  .background {
+    height: auto;
+  }
+
+  .container {
+    margin: 16px 0px;
+    width: 90vw;
+    height: fit-content;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: flex-start;
+    pointer-events: all;
+  }
+
+  .divider {
+    margin: 8px auto 4px auto;
+  }
+
+  .titleBar {
+    padding-bottom: 8px;
+  }
+
+  .glassCard {
+    overflow: hidden;
+    height: 60px;
+  }
+
+  .smallBox {
+    width: calc(100% - 40px);
+    height: fit-content;
+  }
+
+  .largeBox {
+    width: calc(100% - 40px);
+    height: fit-content;
+  }
+  
+}
+
+
+/* tablet */
+@media screen and (min-width: 600px) and (max-width: 1280px) {
+  .container {
+    width: 80vw;
+  }
+}
+
+/* laptop */
+/* @media screen and (min-width: 1024px) {} */
+
+
+/* macbook */
+@media screen and (min-width: 1024px) and (max-width: 1536px) {
+  .container {
+     width: 60vw;
+  }
+
+}
+
+
+/* widescreen */
+@media screen and (min-width: 1536px) {
+  .container {
+     width: 40vw;
+  }
+}
+
+
